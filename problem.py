@@ -19,7 +19,7 @@ score_types = [
 
 
 def get_cv(X, y):
-    cv = ShuffleSplit(n_splits=2, test_size=0.2, random_state=57)
+    cv = ShuffleSplit(n_splits=7, test_size=0.2, random_state=57)
     return cv.split(X)
 
 
