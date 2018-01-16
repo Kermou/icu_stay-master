@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from sklearn.base import BaseEstimator
-from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
 
 
 class Regressor(BaseEstimator):
@@ -8,7 +8,7 @@ class Regressor(BaseEstimator):
         pass
 
     def fit(self, X, y):
-        self.reg = LinearRegression()
+        self.reg = RandomForestRegressor(n_estimators=500, n_jobs=-1)
         self.reg.fit(X, y)
 
     def predict(self, X):
